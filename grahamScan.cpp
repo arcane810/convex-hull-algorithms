@@ -8,7 +8,8 @@ std::vector<Point> grahamScan(std::vector<Point> points)
     {
         return points;
     }
-    std::vector<Point> convex_hull;
+
+    // Finding leftmost point (bottom most among them if there are multiple)
     Point leftMostPoint = points[0];
     for (Point point : points)
     {
@@ -21,6 +22,8 @@ std::vector<Point> grahamScan(std::vector<Point> points)
             leftMostPoint = point;
         }
     }
+
+    // Custom Comparator which will help in sorting points with respect to angle
     auto comparator = [leftMostPoint](Point &left, Point &right) {
         if (left == leftMostPoint)
         {
@@ -42,8 +45,10 @@ std::vector<Point> grahamScan(std::vector<Point> points)
     tempCH.push(points[0]);
     tempCH.push(points[1]);
 
+    // Graham's Scan
     for (int i = 2; i < points.size(); i++)
     {
+        // Delete as many points as possible before adding current point
         while (tempCH.size() > 1)
         {
             Point prev = tempCH.top();
@@ -56,14 +61,17 @@ std::vector<Point> grahamScan(std::vector<Point> points)
             }
             tempCH.pop();
         }
+        // Add current point
         tempCH.push(points[i]);
     }
-
+    std::vector<Point> convex_hull;
     while (!tempCH.empty())
     {
         convex_hull.push_back(tempCH.top());
         tempCH.pop();
     }
+
+    //Emptying the stack returns points in reverse order, reverse again to get CH in clockwise order
     reverse(convex_hull.begin(), convex_hull.end());
 
     return convex_hull;
