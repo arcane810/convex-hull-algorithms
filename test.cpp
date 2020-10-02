@@ -4,11 +4,11 @@
 
 int main()
 {
-    Point A(0, 0);
-    Point B(0, 1);
-    Point C(1, 1);
-    Point D(1, 0);
-    Point E(0.5, 0.5);
+    Point A(2, 3);
+    Point B(10, 2);
+    Point C(0, 1);
+    Point D(5, 4);
+    Point E(1, 10);
 
     std::vector<Point> points({A, B, C, D, E});
 

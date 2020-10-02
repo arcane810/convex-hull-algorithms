@@ -33,7 +33,7 @@ std::vector<Point> grahamScan(std::vector<Point> points)
         {
             return false;
         }
-        int triangleArea = signedTriangleArea(leftMostPoint, left, right);
+        long double triangleArea = signedTriangleArea(leftMostPoint, left, right);
         if (triangleArea == 0)
         {
             return left.x < right.x;
@@ -55,6 +55,7 @@ std::vector<Point> grahamScan(std::vector<Point> points)
             tempCH.pop();
             Point prevprev = tempCH.top();
             tempCH.push(prev);
+
             if (signedTriangleArea(prevprev, prev, points[i]) < 0)
             {
                 break;
