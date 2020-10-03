@@ -1,0 +1,28 @@
+\hypertarget{jarvis_march_8hpp}{}\doxysection{jarvis\+March.\+hpp File Reference}
+\label{jarvis_march_8hpp}\index{jarvisMarch.hpp@{jarvisMarch.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{jarvis_march_8hpp_a7418a1195b4a9401e237a9ceffab4679}{jarvis\+March}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jarvis_march_8hpp_a7418a1195b4a9401e237a9ceffab4679}\label{jarvis_march_8hpp_a7418a1195b4a9401e237a9ceffab4679}} 
+\index{jarvisMarch.hpp@{jarvisMarch.hpp}!jarvisMarch@{jarvisMarch}}
+\index{jarvisMarch@{jarvisMarch}!jarvisMarch.hpp@{jarvisMarch.hpp}}
+\doxysubsubsection{\texorpdfstring{jarvisMarch()}{jarvisMarch()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ jarvis\+March (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+Return the Convex Hull (ordered in anticlockwise direction) of a set of points using the Jarvis March algorithm. Works in worse case time complexity O(\+N$\ast$\+H) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull in anti-\/clockwise order 
+\end{DoxyReturn}

@@ -1,0 +1,132 @@
+\hypertarget{class_point}{}\doxysection{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$utils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_aead8f3bbe5b76955c18c91340636c12c}{Point}} (long double \mbox{\hyperlink{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}{x}}, long double \mbox{\hyperlink{class_point_a9a07458de21d860b9ccdd53a11dcf697}{y}})
+\item 
+\mbox{\hyperlink{class_point_ad92f2337b839a94ce97dcdb439b4325a}{Point}} ()
+\item 
+bool \mbox{\hyperlink{class_point_ae44b1b6182f029c3e7c16da17d4f47af}{operator==}} (const \mbox{\hyperlink{class_point}{Point}} \&point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}\label{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}} 
+long double \mbox{\hyperlink{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}{x}}
+\begin{DoxyCompactList}\small\item\em The x coordinate of the point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_point_a9a07458de21d860b9ccdd53a11dcf697}\label{class_point_a9a07458de21d860b9ccdd53a11dcf697}} 
+long double \mbox{\hyperlink{class_point_a9a07458de21d860b9ccdd53a11dcf697}{y}}
+\begin{DoxyCompactList}\small\item\em The y coordinate of the point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_point_a46c1420828712fb500da015189bd8961}{graham\+Scan}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_point_acbdb609555175da6aae305021fbff9f8}{jarvis\+March}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\item 
+long double \mbox{\hyperlink{class_point_a96c0735110b82b258bdef1e6650ca297}{signed\+Triangle\+Area}} (\mbox{\hyperlink{class_point}{Point}} A, \mbox{\hyperlink{class_point}{Point}} B, \mbox{\hyperlink{class_point}{Point}} C)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class for representing a point in a two-\/dimensional cartesian plane 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_point_aead8f3bbe5b76955c18c91340636c12c}\label{class_point_aead8f3bbe5b76955c18c91340636c12c}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{long double}]{x,  }\item[{long double}]{y }\end{DoxyParamCaption})}
+
+Constructor. Initializes the coordinates to the passed parameters
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate \\
+\hline
+{\em y} & The y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_point_ad92f2337b839a94ce97dcdb439b4325a}\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_point_ae44b1b6182f029c3e7c16da17d4f47af}\label{class_point_ae44b1b6182f029c3e7c16da17d4f47af}} 
+\index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{point }\end{DoxyParamCaption})}
+
+Equality operator. Two points are equal if they have the same x and y coordinates 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_point_a46c1420828712fb500da015189bd8961}\label{class_point_a46c1420828712fb500da015189bd8961}} 
+\index{Point@{Point}!grahamScan@{grahamScan}}
+\index{grahamScan@{grahamScan}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{grahamScan()}{grahamScan()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ graham\+Scan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Return the Convex Hull (ordered in anticlockwise direction) of a set of points using the Graham\textquotesingle{}s Scan algorithm. Works in worse case time complexity O(\+Nlog\+N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull in anti-\/clockwise order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_point_acbdb609555175da6aae305021fbff9f8}\label{class_point_acbdb609555175da6aae305021fbff9f8}} 
+\index{Point@{Point}!jarvisMarch@{jarvisMarch}}
+\index{jarvisMarch@{jarvisMarch}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{jarvisMarch()}{jarvisMarch()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ jarvis\+March (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Return the Convex Hull (ordered in anticlockwise direction) of a set of points using the Jarvis March algorithm. Works in worse case time complexity O(\+N$\ast$\+H) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull in anti-\/clockwise order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_point_a96c0735110b82b258bdef1e6650ca297}\label{class_point_a96c0735110b82b258bdef1e6650ca297}} 
+\index{Point@{Point}!signedTriangleArea@{signedTriangleArea}}
+\index{signedTriangleArea@{signedTriangleArea}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{signedTriangleArea()}{signedTriangleArea()}}
+{\footnotesize\ttfamily long double signed\+Triangle\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{A,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{B,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Find signed area of triangle formed by 3 points in a fixed order
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & 1st \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+{\em B} & 2nd \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+{\em C} & 3rd \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The signed area of triangle formed by points A,B,C in the same order. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{utils_8hpp}{utils.\+hpp}}\item 
+\mbox{\hyperlink{graham_scan_8hpp}{graham\+Scan.\+hpp}}\item 
+\mbox{\hyperlink{jarvis_march_8hpp}{jarvis\+March.\+hpp}}\item 
+utils.\+cpp\end{DoxyCompactItemize}

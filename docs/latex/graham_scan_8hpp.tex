@@ -1,0 +1,28 @@
+\hypertarget{graham_scan_8hpp}{}\doxysection{graham\+Scan.\+hpp File Reference}
+\label{graham_scan_8hpp}\index{grahamScan.hpp@{grahamScan.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{graham_scan_8hpp_ac2d5b759ce5eb2df97c1d98423742f54}{graham\+Scan}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graham_scan_8hpp_ac2d5b759ce5eb2df97c1d98423742f54}\label{graham_scan_8hpp_ac2d5b759ce5eb2df97c1d98423742f54}} 
+\index{grahamScan.hpp@{grahamScan.hpp}!grahamScan@{grahamScan}}
+\index{grahamScan@{grahamScan}!grahamScan.hpp@{grahamScan.hpp}}
+\doxysubsubsection{\texorpdfstring{grahamScan()}{grahamScan()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ graham\+Scan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+Return the Convex Hull (ordered in anticlockwise direction) of a set of points using the Graham\textquotesingle{}s Scan algorithm. Works in worse case time complexity O(\+Nlog\+N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull in anti-\/clockwise order 
+\end{DoxyReturn}

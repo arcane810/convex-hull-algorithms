@@ -3,7 +3,7 @@
 
 std::vector<Point> jarvisMarch(std::vector<Point> points)
 {
-    if (points.size() <= 3)
+    if (points.size() <= 2)
     {
         return points;
     }

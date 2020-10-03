@@ -4,7 +4,7 @@
 
 std::vector<Point> grahamScan(std::vector<Point> points)
 {
-    if (points.size() <= 3)
+    if (points.size() <= 2)
     {
         return points;
     }
