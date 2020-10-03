@@ -38,7 +38,7 @@ std::vector<Point> grahamScan(std::vector<Point> points)
         {
             return left.x < right.x;
         }
-        return signedTriangleArea(leftMostPoint, left, right) < 0;
+        return signedTriangleArea(leftMostPoint, left, right) > 0;
     };
     std::sort(points.begin(), points.end(), comparator);
     std::stack<Point> tempCH;
@@ -56,7 +56,7 @@ std::vector<Point> grahamScan(std::vector<Point> points)
             Point prevprev = tempCH.top();
             tempCH.push(prev);
 
-            if (signedTriangleArea(prevprev, prev, points[i]) < 0)
+            if (signedTriangleArea(prevprev, prev, points[i]) > 0)
             {
                 break;
             }
@@ -72,7 +72,7 @@ std::vector<Point> grahamScan(std::vector<Point> points)
         tempCH.pop();
     }
 
-    //Emptying the stack returns points in reverse order, reverse again to get CH in clockwise order
+    //Emptying the stack returns points in reverse order, reverse again to get CH in ant-clockwise order
     reverse(convex_hull.begin(), convex_hull.end());
 
     return convex_hull;

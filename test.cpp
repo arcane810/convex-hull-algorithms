@@ -1,18 +1,21 @@
 #include "utils.hpp"
 #include "grahamScan.hpp"
+#include "jarvisMarch.hpp"
 #include <iostream>
 
 int main()
 {
-    Point A(2, 3);
-    Point B(10, 2);
-    Point C(0, 1);
-    Point D(5, 4);
-    Point E(1, 10);
+    int n;
+    std::cin >> n;
+    std::vector<Point> points;
+    for (int i = 0; i < n; i++)
+    {
+        int x, y;
+        std::cin >> x >> y;
+        points.push_back(Point(x, y));
+    }
 
-    std::vector<Point> points({A, B, C, D, E});
-
-    std::vector<Point> ch = grahamScan(points);
+    std::vector<Point> ch = jarvisMarch(points);
 
     for (Point p : ch)
     {
