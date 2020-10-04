@@ -88,7 +88,7 @@ std::vector<Point> Hull(std::vector<Point> points)
         {
             right.push_back(point);
         }
-    } 
+    }
     // Add p to the convex hull
     convex_hull.push_back(p);
     quickHull(p, q, left);

@@ -1,6 +1,7 @@
 #include "utils.hpp"
 #include <cmath>
 Point::Point(long double x, long double y) : y(y), x(x) {}
+Point::Point() : y(0), x(0) {}
 bool Point::operator==(const Point &point)
 {
     return (x == point.x && y == point.y);
