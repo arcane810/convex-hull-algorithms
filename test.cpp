@@ -1,6 +1,7 @@
 #include "utils.hpp"
 #include "grahamScan.hpp"
 #include "jarvisMarch.hpp"
+#include "quickHull.hpp"
 #include <iostream>
 
 int main()
@@ -15,7 +16,7 @@ int main()
         points.push_back(Point(x, y));
     }
 
-    std::vector<Point> ch = jarvisMarch(points);
+    std::vector<Point> ch = Hull(points);
 
     for (Point p : ch)
     {
