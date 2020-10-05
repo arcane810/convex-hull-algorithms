@@ -13,4 +13,4 @@
  * 
  * @relatesalso Point
  */
-std::vector<Point> Hull(std::vector<Point> points);
+std::vector<Point> quickHull(std::vector<Point> points);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_9',['x',['../class_point.html#ae5e09abfaf9a7f6a0f00c091a7b61525',1,'Point']]]
+  ['signedtrianglearea_14',['signedTriangleArea',['../class_point.html#a96c0735110b82b258bdef1e6650ca297',1,'Point::signedTriangleArea()'],['../utils_8hpp.html#a96c0735110b82b258bdef1e6650ca297',1,'signedTriangleArea():&#160;utils.cpp']]]
 ];

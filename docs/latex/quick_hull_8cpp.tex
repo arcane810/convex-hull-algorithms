@@ -1,0 +1,49 @@
+\hypertarget{quick_hull_8cpp}{}\doxysection{quick\+Hull.\+cpp File Reference}
+\label{quick_hull_8cpp}\index{quickHull.cpp@{quickHull.cpp}}
+{\ttfamily \#include \char`\"{}quick\+Hull.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{quick_hull_8cpp_a3f794be0eb2a7491337bd87aabe35ce8}{quick\+Hull\+Helper}} (\mbox{\hyperlink{class_point}{Point}} p, \mbox{\hyperlink{class_point}{Point}} q, std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points, std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \&convex\+\_\+hull)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{quick_hull_8cpp_a57bda9e8c67d13b48a3912ba86223032}{quick\+Hull}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{quick_hull_8cpp_a57bda9e8c67d13b48a3912ba86223032}\label{quick_hull_8cpp_a57bda9e8c67d13b48a3912ba86223032}} 
+\index{quickHull.cpp@{quickHull.cpp}!quickHull@{quickHull}}
+\index{quickHull@{quickHull}!quickHull.cpp@{quickHull.cpp}}
+\doxysubsubsection{\texorpdfstring{quickHull()}{quickHull()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ quick\+Hull (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+Return the Convex Hull of a set of points using the Quickhull algorithm. Works in worse case time complexity O(\+N$\ast$\+N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{quick_hull_8cpp_a3f794be0eb2a7491337bd87aabe35ce8}\label{quick_hull_8cpp_a3f794be0eb2a7491337bd87aabe35ce8}} 
+\index{quickHull.cpp@{quickHull.cpp}!quickHullHelper@{quickHullHelper}}
+\index{quickHullHelper@{quickHullHelper}!quickHull.cpp@{quickHull.cpp}}
+\doxysubsubsection{\texorpdfstring{quickHullHelper()}{quickHullHelper()}}
+{\footnotesize\ttfamily void quick\+Hull\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{q,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \&}]{convex\+\_\+hull }\end{DoxyParamCaption})}
+
+Adds farthest point from line joining p,q to convex hull and recrsively divides the point set to find convex hull
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & 1st point of line \\
+\hline
+{\em q} & 2nd point of line \\
+\hline
+{\em points} & A vector of points chosen from previous division of points below and above a line \\
+\hline
+{\em convex\+\_\+hull} & The convex hull for overall set to which the points in convex hull are added, passed by reference \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,28 @@
+\hypertarget{quick_hull_8hpp}{}\doxysection{quick\+Hull.\+hpp File Reference}
+\label{quick_hull_8hpp}\index{quickHull.hpp@{quickHull.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{quick_hull_8hpp_a49a86bcbbdbfdc62d7578bb8bb0d6a05}{quick\+Hull}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{quick_hull_8hpp_a49a86bcbbdbfdc62d7578bb8bb0d6a05}\label{quick_hull_8hpp_a49a86bcbbdbfdc62d7578bb8bb0d6a05}} 
+\index{quickHull.hpp@{quickHull.hpp}!quickHull@{quickHull}}
+\index{quickHull@{quickHull}!quickHull.hpp@{quickHull.hpp}}
+\doxysubsubsection{\texorpdfstring{quickHull()}{quickHull()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ quick\+Hull (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})}
+
+Return the Convex Hull of a set of points using the Quickhull algorithm. Works in worse case time complexity O(\+N$\ast$\+N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull 
+\end{DoxyReturn}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jarvismarch_16',['jarvisMarch',['../class_point.html#acbdb609555175da6aae305021fbff9f8',1,'Point::jarvisMarch()'],['../jarvis_march_8hpp.html#a7418a1195b4a9401e237a9ceffab4679',1,'jarvisMarch():&#160;jarvisMarch.cpp']]]
+  ['grahamscan_27',['grahamScan',['../class_point.html#a46c1420828712fb500da015189bd8961',1,'Point::grahamScan()'],['../graham_scan_8cpp.html#a46c1420828712fb500da015189bd8961',1,'grahamScan(std::vector&lt; Point &gt; points):&#160;grahamScan.cpp'],['../graham_scan_8hpp.html#ac2d5b759ce5eb2df97c1d98423742f54',1,'grahamScan(std::vector&lt; Point &gt; points):&#160;grahamScan.cpp']]]
 ];

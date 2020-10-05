@@ -16,7 +16,7 @@ int main()
         points.push_back(Point(x, y));
     }
 
-    std::vector<Point> ch = Hull(points);
+    std::vector<Point> ch = quickHull(points);
 
     for (Point p : ch)
     {

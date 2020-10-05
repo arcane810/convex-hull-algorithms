@@ -25,9 +25,15 @@ long double \mbox{\hyperlink{class_point_a9a07458de21d860b9ccdd53a11dcf697}{y}}
 \doxysubsection*{Related Functions}
 (Note that these are not member functions.) \begin{DoxyCompactItemize}
 \item 
+long double \mbox{\hyperlink{class_point_a97d321083887b3236bea7ce7c0b386fb}{find\+Dist}} (\mbox{\hyperlink{class_point}{Point}} p, \mbox{\hyperlink{class_point}{Point}} q)
+\item 
 std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_point_a46c1420828712fb500da015189bd8961}{graham\+Scan}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
 \item 
 std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_point_acbdb609555175da6aae305021fbff9f8}{jarvis\+March}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
+\item 
+void \mbox{\hyperlink{class_point_a3f794be0eb2a7491337bd87aabe35ce8}{quick\+Hull\+Helper}} (\mbox{\hyperlink{class_point}{Point}} p, \mbox{\hyperlink{class_point}{Point}} q, std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points, std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \&convex\+\_\+hull)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_point_a57bda9e8c67d13b48a3912ba86223032}{quick\+Hull}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ points)
 \item 
 long double \mbox{\hyperlink{class_point_a96c0735110b82b258bdef1e6650ca297}{signed\+Triangle\+Area}} (\mbox{\hyperlink{class_point}{Point}} A, \mbox{\hyperlink{class_point}{Point}} B, \mbox{\hyperlink{class_point}{Point}} C)
 \end{DoxyCompactItemize}
@@ -70,6 +76,22 @@ Default Constructor
 Equality operator. Two points are equal if they have the same x and y coordinates 
 
 \doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_point_a97d321083887b3236bea7ce7c0b386fb}\label{class_point_a97d321083887b3236bea7ce7c0b386fb}} 
+\index{Point@{Point}!findDist@{findDist}}
+\index{findDist@{findDist}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{findDist()}{findDist()}}
+{\footnotesize\ttfamily long double Point\+::find\+Dist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Find distance of a point from a line joining two points. 
+\begin{DoxyParams}{Parameters}
+{\em p} & 1st \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+{\em q} & 2nd \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance of \mbox{\hyperlink{class_point}{Point}} from the line joining p and q. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_point_a46c1420828712fb500da015189bd8961}\label{class_point_a46c1420828712fb500da015189bd8961}} 
 \index{Point@{Point}!grahamScan@{grahamScan}}
 \index{grahamScan@{grahamScan}!Point@{Point}}
@@ -102,6 +124,41 @@ Return the Convex Hull (ordered in anticlockwise direction) of a set of points u
 \begin{DoxyReturn}{Returns}
 A vector of points which contains the points of the Convex Hull in anti-\/clockwise order 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_point_a57bda9e8c67d13b48a3912ba86223032}\label{class_point_a57bda9e8c67d13b48a3912ba86223032}} 
+\index{Point@{Point}!quickHull@{quickHull}}
+\index{quickHull@{quickHull}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{quickHull()}{quickHull()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ quick\+Hull (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Return the Convex Hull of a set of points using the Quickhull algorithm. Works in worse case time complexity O(\+N$\ast$\+N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & A vector of points for which the Convex Hull is to be found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of points which contains the points of the Convex Hull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_point_a3f794be0eb2a7491337bd87aabe35ce8}\label{class_point_a3f794be0eb2a7491337bd87aabe35ce8}} 
+\index{Point@{Point}!quickHullHelper@{quickHullHelper}}
+\index{quickHullHelper@{quickHullHelper}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{quickHullHelper()}{quickHullHelper()}}
+{\footnotesize\ttfamily void quick\+Hull\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{q,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$}]{points,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \&}]{convex\+\_\+hull }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Adds farthest point from line joining p,q to convex hull and recrsively divides the point set to find convex hull
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & 1st point of line \\
+\hline
+{\em q} & 2nd point of line \\
+\hline
+{\em points} & A vector of points chosen from previous division of points below and above a line \\
+\hline
+{\em convex\+\_\+hull} & The convex hull for overall set to which the points in convex hull are added, passed by reference \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_point_a96c0735110b82b258bdef1e6650ca297}\label{class_point_a96c0735110b82b258bdef1e6650ca297}} 
 \index{Point@{Point}!signedTriangleArea@{signedTriangleArea}}
 \index{signedTriangleArea@{signedTriangleArea}!Point@{Point}}
@@ -129,4 +186,6 @@ The documentation for this class was generated from the following files\+:\begin
 \mbox{\hyperlink{utils_8hpp}{utils.\+hpp}}\item 
 \mbox{\hyperlink{graham_scan_8hpp}{graham\+Scan.\+hpp}}\item 
 \mbox{\hyperlink{jarvis_march_8hpp}{jarvis\+March.\+hpp}}\item 
+\mbox{\hyperlink{quick_hull_8cpp}{quick\+Hull.\+cpp}}\item 
+\mbox{\hyperlink{quick_hull_8hpp}{quick\+Hull.\+hpp}}\item 
 utils.\+cpp\end{DoxyCompactItemize}

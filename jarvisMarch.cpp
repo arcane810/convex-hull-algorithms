@@ -1,3 +1,5 @@
+/** @file */
+
 #include "jarvisMarch.hpp"
 #include <cmath>
 

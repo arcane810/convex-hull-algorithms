@@ -1,3 +1,5 @@
+/** @file */
+
 #include "grahamScan.hpp"
 #include <algorithm>
 #include <stack>

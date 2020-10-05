@@ -97,10 +97,16 @@ long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
+<tr class="memitem:a97d321083887b3236bea7ce7c0b386fb"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a97d321083887b3236bea7ce7c0b386fb">findDist</a> (<a class="el" href="class_point.html">Point</a> p, <a class="el" href="class_point.html">Point</a> q)</td></tr>
+<tr class="separator:a97d321083887b3236bea7ce7c0b386fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c1420828712fb500da015189bd8961"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a46c1420828712fb500da015189bd8961">grahamScan</a> (std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; points)</td></tr>
 <tr class="separator:a46c1420828712fb500da015189bd8961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbdb609555175da6aae305021fbff9f8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#acbdb609555175da6aae305021fbff9f8">jarvisMarch</a> (std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; points)</td></tr>
 <tr class="separator:acbdb609555175da6aae305021fbff9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f794be0eb2a7491337bd87aabe35ce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a3f794be0eb2a7491337bd87aabe35ce8">quickHullHelper</a> (<a class="el" href="class_point.html">Point</a> p, <a class="el" href="class_point.html">Point</a> q, std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; points, std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; &amp;convex_hull)</td></tr>
+<tr class="separator:a3f794be0eb2a7491337bd87aabe35ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bda9e8c67d13b48a3912ba86223032"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a57bda9e8c67d13b48a3912ba86223032">quickHull</a> (std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; points)</td></tr>
+<tr class="separator:a57bda9e8c67d13b48a3912ba86223032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c0735110b82b258bdef1e6650ca297"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a96c0735110b82b258bdef1e6650ca297">signedTriangleArea</a> (<a class="el" href="class_point.html">Point</a> A, <a class="el" href="class_point.html">Point</a> B, <a class="el" href="class_point.html">Point</a> C)</td></tr>
 <tr class="separator:a96c0735110b82b258bdef1e6650ca297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -182,6 +188,50 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a97d321083887b3236bea7ce7c0b386fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97d321083887b3236bea7ce7c0b386fb">&#9670;&nbsp;</a></span>findDist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double Point::findDist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find distance of a point from a line joining two points. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>1st <a class="el" href="class_point.html">Point</a> </td></tr>
+    <tr><td class="paramname">q</td><td>2nd <a class="el" href="class_point.html">Point</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance of <a class="el" href="class_point.html">Point</a> from the line joining p and q. </dd></dl>
+
+</div>
+</div>
 <a id="a46c1420828712fb500da015189bd8961"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46c1420828712fb500da015189bd8961">&#9670;&nbsp;</a></span>grahamScan()</h2>
 
@@ -250,6 +300,98 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a57bda9e8c67d13b48a3912ba86223032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bda9e8c67d13b48a3912ba86223032">&#9670;&nbsp;</a></span>quickHull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; quickHull </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td>
+          <td class="paramname"><em>points</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the Convex Hull of a set of points using the Quickhull algorithm. Works in worse case time complexity O(N*N) and space complexity O(N+H) where N is the number of points and H is the number of points in the Convex Hull.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>A vector of points for which the Convex Hull is to be found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of points which contains the points of the Convex Hull </dd></dl>
+
+</div>
+</div>
+<a id="a3f794be0eb2a7491337bd87aabe35ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f794be0eb2a7491337bd87aabe35ce8">&#9670;&nbsp;</a></span>quickHullHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quickHullHelper </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_point.html">Point</a>&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>convex_hull</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds farthest point from line joining p,q to convex hull and recrsively divides the point set to find convex hull</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>1st point of line </td></tr>
+    <tr><td class="paramname">q</td><td>2nd point of line </td></tr>
+    <tr><td class="paramname">points</td><td>A vector of points chosen from previous division of points below and above a line </td></tr>
+    <tr><td class="paramname">convex_hull</td><td>The convex hull for overall set to which the points in convex hull are added, passed by reference </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a96c0735110b82b258bdef1e6650ca297"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a96c0735110b82b258bdef1e6650ca297">&#9670;&nbsp;</a></span>signedTriangleArea()</h2>
 
@@ -306,6 +448,8 @@ Related Functions</h2></td></tr>
 <li><a class="el" href="utils_8hpp_source.html">utils.hpp</a></li>
 <li><a class="el" href="graham_scan_8hpp_source.html">grahamScan.hpp</a></li>
 <li><a class="el" href="jarvis_march_8hpp_source.html">jarvisMarch.hpp</a></li>
+<li><a class="el" href="quick_hull_8cpp.html">quickHull.cpp</a></li>
+<li><a class="el" href="quick_hull_8hpp_source.html">quickHull.hpp</a></li>
 <li>utils.cpp</li>
 </ul>
 </div><!-- contents -->
