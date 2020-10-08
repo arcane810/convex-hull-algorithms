@@ -44,10 +44,10 @@ void quickHullHelper(Point p, Point q, std::vector<Point> points, std::vector<Po
             }
         }
         // Recurse on exterior points afer pruning interior points
-        quickHullHelper(farthest, p, upper, convex_hull);
+        quickHullHelper(p, farthest, upper, convex_hull);
         // Add farthest point from line pq to convex hull
         convex_hull.push_back(farthest);
-        quickHullHelper(q, farthest, lower, convex_hull);
+        quickHullHelper(farthest, q, lower, convex_hull);
     }
 }
 
