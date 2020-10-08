@@ -14,11 +14,11 @@ int32_t main()
 {
     ofstream fout("test2.txt");
 
-    int n = 10000;
+    int n = 50000;
     fout << n << "\n";
     for (int i = 0; i < n; i++)
     {
-        fout << i - 5000 << " " << i * i - 5000 << "\n";
+        fout << i - 25000 << " " << i * i - 25000 << "\n";
     }
 
     return 0;

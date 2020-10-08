@@ -9,12 +9,75 @@
     </head>
     <body>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="graham.html">Graham's Scan Test Results</a></li>
+            <li><a href="jarvis.html">Jarvis March Test Results</a></li>
+            <li><a href="quickhull.html">QuickHull Test Results</a></li>
         </ul>
         <br />
         <h1>Convex Hull Algorithms - Test Results Comparison</h1>
+        <h3>Test1</h3>
+        <p>This was just a simple case of 5 points manually created</p>
+        <h3>Test2</h3>
+        <p>This test case had 50000 points of form (x-k,x<sup>2</sup>-k)</p>
+        <h3>Test3</h3>
+        <p>A random set of 50000 points where 34 points were on hull</p>
+        <h3>Test4</h3>
+        <p>A random set of 500000 points where 33 points were on hull</p>
+        <h3>Test5</h3>
+        <p>A random set of 2000000 points where 39 points were on hull</p>
+        <h3>Test6</h3>
+        <p>
+            A set of 1000 uniformly spaced (uniform angle spacing) points
+            slightly displaced away or towards the center
+        </p>
+        <h3>Test7 (Not used because of unreliable results)</h3>
+        <p>
+            This test was created as a worse case for quickhull. It takes a
+            point on a circle at angles 180, 90, 45, 22.5 ... This wasn't used
+            because points quickly become very close and cannot be stored with
+            precision and algorithms also make precision errors while finding
+            the convex hull
+        </p>
+        <br />
+        <table>
+            <tr>
+                <th>Algorithm</th>
+                <th>Test1</th>
+                <th>Test2</th>
+                <th>Test3 (H = 34)</th>
+                <th>Test4 (H = 33)</th>
+                <th>Test5 (H = 39)</th>
+                <th>Test6 (H = 548)</th>
+            </tr>
+            <tr>
+                <th>Graham's Scan</th>
+                <td>~0 s</td>
+                <td>0.061 s</td>
+                <td>0.068 s</td>
+                <td>0.766 s</td>
+                <td>3.334 s</td>
+                <td>0.002 s</td>
+            </tr>
+            <tr>
+                <th>Jarvis March</th>
+                <td>~0 s</td>
+                <td>89.951 s</td>
+                <td>0.065 s</td>
+                <td>0.613 s</td>
+                <td>2.864 s</td>
+                <td>0.018 s</td>
+            </tr>
+            <tr>
+                <th>QuickHull</th>
+                <td>~0 s</td>
+                <td>0.144 s</td>
+                <td>0.013 s</td>
+                <td>0.123 s</td>
+                <td>0.467 s</td>
+                <td>0.002 s</td>
+            </tr>
+        </table>
+        <br />
     </body>
 </html>
