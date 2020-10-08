@@ -18,3 +18,5 @@ Steps to use the API:
 -   Compile your C++ file with the file algorithmName.cpp and utils.cpp  
     Eg:
     g++ test.cpp grahamScan.cpp utils.cpp
+
+Test Results in /tests/html/
