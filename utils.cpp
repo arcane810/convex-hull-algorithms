@@ -1,3 +1,5 @@
+/** @file */
+
 #include "utils.hpp"
 #include <cmath>
 Point::Point(long double x, long double y) : y(y), x(x) {}

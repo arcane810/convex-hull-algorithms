@@ -30,7 +30,7 @@ std::vector<Point> jarvisMarch(std::vector<Point> points)
     // Keep looping till the new point is same as the 1st point in CH
     while (true)
     {
-        Point minimumAnglePoint = points[0];
+        Point minimumAnglePoint = origin;
         for (Point point : points)
         {
             if (point == origin)
@@ -38,7 +38,7 @@ std::vector<Point> jarvisMarch(std::vector<Point> points)
                 continue;
             }
             long double area = signedTriangleArea(origin, minimumAnglePoint, point);
-            if (area < 0)
+            if (area < 0 || minimumAnglePoint == origin)
             {
                 // area less than 0 means new point makes a smaller angle
                 minimumAnglePoint = point;
@@ -46,7 +46,7 @@ std::vector<Point> jarvisMarch(std::vector<Point> points)
             else if (area == 0)
             {
                 // if current point is collinear to the minimum Angle point, choose the closer one
-                if (std::abs(origin.x - point.x) < std::abs(origin.x - minimumAnglePoint.x))
+                if (std::abs(origin.x - point.x) > std::abs(origin.x - minimumAnglePoint.x))
                 {
                     minimumAnglePoint = point;
                 }

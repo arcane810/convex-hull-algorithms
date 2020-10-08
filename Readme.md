@@ -7,3 +7,14 @@ This API provides a Point class with some general functions about it and 3 Conve
 -   Graham's Scan (grahamScan.hpp and grahamScan.cpp)
 -   Jarvis March (jarvisMarch.hpp and jarvisMarch.cpp)
 -   QuickHull (quickHull.hpp and quickHull.cpp)
+
+Steps to use the API:
+
+-   Use utils.hpp header for the Point class
+-   Include the header file algorithmName.hpp  
+    Eg:
+    #include <grahamScan.hpp>
+-   Use the function for the respective algorithm
+-   Compile your C++ file with the file algorithmName.cpp and utils.cpp  
+    Eg:
+    g++ test.cpp grahamScan.cpp utils.cpp

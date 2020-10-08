@@ -58,51 +58,51 @@ std::vector<Point> quickHull(std::vector<Point> points)
         return points;
     }
 
-    // Select top-most and bottom-most point
+    // Select left-most and right-most point
     Point p, q;
     p = points[0];
     q = points[0];
     for (Point point : points)
     {
-        if (point.y < q.y)
-        {
-            q = point;
-        }
-        else if (point.y == q.y && point.x > q.x)
-        {
-            q = point;
-        }
-        if (point.y > p.y)
+        if (point.x < p.x)
         {
             p = point;
         }
-        else if (point.y == p.y && point.x > p.x)
+        else if (point.x == p.x && point.y < p.y)
         {
             p = point;
+        }
+        if (point.x > q.x)
+        {
+            q = point;
+        }
+        else if (point.x == q.x && point.x > q.x)
+        {
+            q = point;
         }
     }
 
-    // Split into two sets, left and right of the line joining q to p.
-    std::vector<Point> left, right;
+    // Split into two sets, above and below the line joining q to p.
+    std::vector<Point> upper, lower;
     for (Point point : points)
     {
         if (signedTriangleArea(p, q, point) < 0)
         {
-            left.push_back(point);
+            upper.push_back(point);
         }
         else if (signedTriangleArea(p, q, point) > 0)
         {
-            right.push_back(point);
+            lower.push_back(point);
         }
     }
 
     std::vector<Point> convex_hull;
     // Add p to the convex hull
     convex_hull.push_back(p);
-    quickHullHelper(p, q, left, convex_hull);
+    quickHullHelper(p, q, upper, convex_hull);
     // Add q to the convex hull
     convex_hull.push_back(q);
-    quickHullHelper(q, p, right, convex_hull);
+    quickHullHelper(q, p, lower, convex_hull);
 
     return convex_hull;
 }
